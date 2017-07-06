@@ -8,11 +8,16 @@
 
 #flashcard-container {
   position: fixed;
-  top: 10%;
+  bottom: 10%;
   right: 1%;
 }
+#toggle-button {
+  float: left;
+  margin: 10% 8px 10% auto;
 
+}
 .flashcard {
+  float: right;
   height: 300px;
   width: 500px;
   margin: 10% auto;
