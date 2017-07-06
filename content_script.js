@@ -1,4 +1,14 @@
 document.body.style.backgroundColor="aliceblue"
+
+var child = document.getElementById("container");
+
+if (child !== null) {
+  var child = document.getElementById("container");
+  document.body.removeChild(child);
+}
+
+var container = document.createElement("div");
+container.id = 'container'
 var firstDiv = document.createElement("div");
 firstDiv.className = "stage";
 
@@ -22,7 +32,8 @@ back.appendChild(backText);
 secondDiv.appendChild(front);
 secondDiv.appendChild(back);
 firstDiv.appendChild(secondDiv);
-document.body.appendChild(firstDiv);
+container.appendChild(firstDiv);
+document.body.appendChild(container);
 var node = document.createElement("P");
 node.innerText = 'hi';
 document.body.appendChild(node);
@@ -32,6 +43,7 @@ document.getElementById("flashcard").addEventListener("click", handler);
 
 // The handler also must go in a .js file
 function handler() {
+
   var currFlash = document.getElementById("flashcard")
 
   if (currFlash.classList.length == 2){
