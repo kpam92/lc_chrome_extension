@@ -32,5 +32,11 @@ document.getElementById("flashcard").addEventListener("click", handler);
 
 // The handler also must go in a .js file
 function handler() {
-  alert("haaha")
+  var currFlash = document.getElementById("flashcard")
+
+  if (currFlash.classList.length == 2){
+    currFlash.className = 'flashcard'
+  } else {
+    currFlash.className = 'flashcard flipped'
+  }
 }
