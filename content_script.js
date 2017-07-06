@@ -1,4 +1,3 @@
-document.body.style.backgroundColor="aliceblue"
 
 var child = document.getElementById("flashcard-container");
 
@@ -41,9 +40,7 @@ document.body.appendChild(container);
 var node = document.createElement("P");
 
 
-// test
-node.innerText = 'hi';
-document.body.appendChild(node);
+
 
 document.getElementById("flashcard").addEventListener("click", handler);
 
