@@ -1,14 +1,13 @@
 document.body.style.backgroundColor="aliceblue"
 
-var child = document.getElementById("container");
+var child = document.getElementById("flashcard-container");
 
 if (child !== null) {
-  var child = document.getElementById("container");
   document.body.removeChild(child);
 }
 
 var container = document.createElement("div");
-container.id = 'container'
+container.id = 'flashcard-container'
 var firstDiv = document.createElement("div");
 firstDiv.className = "stage";
 
