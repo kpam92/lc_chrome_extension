@@ -4,6 +4,7 @@ firstDiv.className = "stage";
 
 var secondDiv = document.createElement("div");
 secondDiv.className = "flashcard";
+secondDiv.id = "flashcard";
 
 var front = document.createElement("div");
 front.className = "front";
@@ -25,3 +26,11 @@ document.body.appendChild(firstDiv);
 var node = document.createElement("P");
 node.innerText = 'hi';
 document.body.appendChild(node);
+
+document.getElementById("flashcard").addEventListener("click", handler);
+
+
+// The handler also must go in a .js file
+function handler() {
+  alert("haaha")
+}
