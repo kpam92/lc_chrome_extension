@@ -146,3 +146,16 @@ Started GET "/assets/api/cards.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44d
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-07-07 15:18:32 -0700
+
+
+Started GET "/api/cards" for ::1 at 2017-07-07 15:45:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::CardsController#index as HTML
+  Rendered api/cards/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 258ms (Views: 246.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/cards" for ::1 at 2017-07-07 15:45:10 -0700
+Processing by Api::CardsController#index as HTML
+  Rendered api/cards/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
