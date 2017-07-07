@@ -19,6 +19,19 @@
   height:40px;
   width:40px;
 }
+.button-in{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -webkit-transition-timing-function: ease;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.button-out{
+  -webkit-transition-timing-function: ease;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+
+}
 .no-show {
   right: -504px;
 }

@@ -61,11 +61,15 @@ function handler() {
 }
 function handleToggle() {
 
-  var container = document.getElementById("flashcard-container")
+  var container = document.getElementById("flashcard-container");
+  var button = document.getElementById("toggle-button");
 
   if (container.className === "no-show"){
     container.className = "show-card";
+    button.className = "button-out";
+    // button.classList.remove("button-in");
   } else {
     container.className = "no-show";
+    button.className = "button-in";
   }
 }
