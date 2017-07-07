@@ -7,7 +7,7 @@ if (child !== null) {
 
 var container = document.createElement("div");
 container.id = 'flashcard-container'
-container.className = 'show-card'
+container.className = 'no-show'
 var firstDiv = document.createElement("div");
 firstDiv.className = "stage";
 
@@ -28,7 +28,6 @@ backText.innerText = "back"
 
 var toggleButton = document.createElement("div");
 toggleButton.id = 'toggle-button';
-toggleButton.innerText = 'toggle toggle';
 
 front.appendChild(frontText);
 back.appendChild(backText);
@@ -38,9 +37,11 @@ firstDiv.appendChild(secondDiv);
 firstDiv.appendChild(toggleButton);
 container.appendChild(firstDiv);
 document.body.appendChild(container);
-var node = document.createElement("P");
 
 
+
+
+setTimeout(handleToggle, 500);
 
 
 document.getElementById("flashcard").addEventListener("click", handler);
