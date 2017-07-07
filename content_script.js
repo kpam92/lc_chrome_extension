@@ -7,6 +7,7 @@ if (child !== null) {
 
 var container = document.createElement("div");
 container.id = 'flashcard-container'
+container.className = 'show-card'
 var firstDiv = document.createElement("div");
 firstDiv.className = "stage";
 
@@ -43,6 +44,7 @@ var node = document.createElement("P");
 
 
 document.getElementById("flashcard").addEventListener("click", handler);
+document.getElementById("toggle-button").addEventListener("click", handleToggle);
 
 
 // The handler also must go in a .js file
@@ -54,5 +56,15 @@ function handler() {
     currFlash.className = 'flashcard'
   } else {
     currFlash.className = 'flashcard flipped'
+  }
+}
+function handleToggle() {
+
+  var container = document.getElementById("flashcard-container")
+
+  if (container.className === "no-show"){
+    container.className = "show-card";
+  } else {
+    container.className = "no-show";
   }
 }

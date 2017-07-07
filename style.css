@@ -1,6 +1,3 @@
-*{
-  color:blue;
-}
 
 .stage {
   -webkit-perspective: 1000;
@@ -9,12 +6,20 @@
 #flashcard-container {
   position: fixed;
   bottom: 10%;
-  right: 1%;
+  -webkit-transition-timing-function: ease;
+  transition: all 1s;
+  -webkit-transition: all 1s;
 }
 #toggle-button {
   float: left;
   margin: 10% 8px 10% auto;
 
+}
+.no-show {
+  right: -504px;
+}
+.show-card {
+  right: 1% !important;
 }
 .flashcard {
   float: right;
