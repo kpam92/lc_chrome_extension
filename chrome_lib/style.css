@@ -89,8 +89,8 @@
 }
 
 .front, .back {
-  height: 300px;
-  width: 500px;
+  height: 296px;
+  width: 496px;
   position: absolute;
   text-align: center;
   -webkit-backface-visibility: hidden;
