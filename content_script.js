@@ -42,8 +42,8 @@ leftButton.id = 'left-button';
 
 front.appendChild(frontText);
 back.appendChild(backText);
-arrowContainer.appendChild(rightButton);
 arrowContainer.appendChild(leftButton);
+arrowContainer.appendChild(rightButton);
 secondDiv.appendChild(front);
 secondDiv.appendChild(back);
 firstDiv.appendChild(secondDiv);
