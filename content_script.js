@@ -19,15 +19,17 @@ secondDiv.id = "flashcard";
 
 var front = document.createElement("div");
 front.className = "front";
+front.id = 0
 
 var back = document.createElement("div");
 back.className = "back";
 
 var frontText = document.createElement("p");
+frontText.id = 'front-text';
 frontText.innerText = cardValues[0][0]
-frontText.id = 0
 
 var backText = document.createElement("p");
+backText.id = 'back-text';
 backText.innerText = cardValues[0][1]
 
 var toggleButton = document.createElement("div");
@@ -71,10 +73,21 @@ document.getElementById("left-button").addEventListener("click", changeCard);
 
 
 function changeCard() {
-  if (this.id === 'right-button') {
 
-  } else {
+  var front = document.getElementById("front-text")
+  var back = document.getElementById("back-text")
+  var cardIndexElement = document.getElementsByClassName("front")[0]
+  var idx = parseInt(cardIndexElement.id)
 
+
+  if (this.id === 'right-button' && idx < cardValues.length - 2) {
+    front.innerText = cardValues[idx+1][0]
+    back.innerText = cardValues[idx+1][1]
+    cardIndexElement.id = (idx + 1)
+  } else if (this.id === 'left-button' && idx > 0) {
+    front.innerText = cardValues[idx-1][0]
+    back.innerText = cardValues[idx-1][1]
+    cardIndexElement.id = (idx - 1)
   }
 }
 
@@ -82,7 +95,6 @@ function changeCard() {
 function flipOver() {
 
   var currFlash = document.getElementById("flashcard")
-
   if (currFlash.classList.length == 2){
     currFlash.className = 'flashcard'
   } else {
