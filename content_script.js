@@ -80,7 +80,7 @@ function changeCard() {
   var idx = parseInt(cardIndexElement.id)
 
 
-  if (this.id === 'right-button' && idx < cardValues.length - 2) {
+  if (this.id === 'right-button' && idx < cardValues.length - 1) {
     front.innerText = cardValues[idx+1][0]
     back.innerText = cardValues[idx+1][1]
     cardIndexElement.id = (idx + 1)

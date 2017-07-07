@@ -18,6 +18,7 @@
   background-size:contain;
   height:40px;
   width:40px;
+  cursor: pointer;
 }
 
 #arrow-container {
@@ -33,6 +34,7 @@
   height:40px;
   width:40px;
   float: left;
+  cursor: pointer;
 }
 
 #right-button {
@@ -42,6 +44,7 @@
   height:40px;
   width:40px;
   float: left;
+  cursor: pointer;
 }
 
 .button-in{
@@ -74,6 +77,7 @@
   -webkit-transform-style: preserve-3d;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
+  cursor: ne-resize;
 }
 .flashcard div {
   background: #ffffff;
