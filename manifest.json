@@ -1,6 +1,6 @@
 {
-  "name": "Page Redder",
-  "description": "Make the current page red",
+  "name": "Leetcode Flashcards",
+  "description": "Leetcode note flashcards",
   "version": "2.0",
   "permissions": [
     "activeTab"

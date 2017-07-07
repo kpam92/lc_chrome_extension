@@ -28,13 +28,27 @@ backText.innerText = "back"
 
 var toggleButton = document.createElement("div");
 toggleButton.id = 'toggle-button';
+toggleButton.className = 'button-in';
+
+var arrowContainer = document.createElement("div");
+arrowContainer.id = 'arrow-container';
+
+var rightButton = document.createElement("div");
+rightButton.id = 'right-button';
+
+var leftButton = document.createElement("div");
+leftButton.id = 'left-button';
+
 
 front.appendChild(frontText);
 back.appendChild(backText);
+arrowContainer.appendChild(rightButton);
+arrowContainer.appendChild(leftButton);
 secondDiv.appendChild(front);
 secondDiv.appendChild(back);
 firstDiv.appendChild(secondDiv);
 firstDiv.appendChild(toggleButton);
+firstDiv.appendChild(arrowContainer);
 container.appendChild(firstDiv);
 document.body.appendChild(container);
 

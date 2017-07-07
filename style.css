@@ -13,12 +13,28 @@
 #toggle-button {
   float: left;
   margin: 10% 8px 10% auto;
-  background-image: url("http://res.cloudinary.com/dt5viyxyq/image/upload/c_scale,h_35/v1499386354/arrow_dfau9c.png");
+  background-image: url("http://res.cloudinary.com/dt5viyxyq/image/upload/v1499386354/arrow_dfau9c.png");
   background-repeat:no-repeat;
   background-size:contain;
   height:40px;
   width:40px;
 }
+
+#left-button {
+  background-image: url("http://res.cloudinary.com/dt5viyxyq/image/upload/a_180/v1499396738/arrow-right-outline-128_hv7ty0.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  height:40px;
+  width:40px;
+}
+#right-button {
+  background-image: url("http://res.cloudinary.com/dt5viyxyq/image/upload/v1499396738/arrow-right-outline-128_hv7ty0.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  height:40px;
+  width:40px;
+}
+
 .button-in{
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -27,7 +43,7 @@
   -webkit-transition: all 1s;
 }
 .button-out{
-  -webkit-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease-out;
   transition: all 1s;
   -webkit-transition: all 1s;
 
@@ -43,7 +59,7 @@
   height: 300px;
   width: 500px;
   margin: 10% auto;
-  border: 1px solid gray;
+  border: 2px solid #202020;
   border-radius: 3px;
   box-shadow: 2px 2px 2px #000;
   -webkit-transform-style: preserve-3d;
