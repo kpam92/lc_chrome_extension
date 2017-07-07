@@ -3,5 +3,5 @@ Rails.application.routes.draw do
     resources :cards, only: [:index]
   end
 
-  root to: redirect("/cards")
+  root to: redirect("/api/cards")
 end
