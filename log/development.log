@@ -652,3 +652,41 @@ ActionView::MissingTemplate (Missing template api/cards/index, application/index
   Rendered /Users/kevinmathews/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/kevinmathews/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/kevinmathews/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (125.1ms)
+
+
+Started GET "/api/cards" for ::1 at 2017-07-07 16:27:20 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::CardsController#index as JSON
+  [1m[35mCard Load (1.4ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered api/cards/index.json.jbuilder (7.4ms)
+Completed 200 OK in 29ms (Views: 15.9ms | ActiveRecord: 2.4ms)
+  [1m[36mCard Load (0.6ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "cards" ("front", "back", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["front", "front"], ["back", "back"], ["created_at", "2017-07-07 23:28:24.700973"], ["updated_at", "2017-07-07 23:28:24.700973"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mCard Load (1.6ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (0.5ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+
+
+Started GET "/api/cards" for ::1 at 2017-07-07 16:30:17 -0700
+Processing by Api::CardsController#index as JSON
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered api/cards/_card.json.jbuilder (0.4ms)
+  Rendered api/cards/index.json.jbuilder (12.1ms)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/cards" for ::1 at 2017-07-07 16:30:18 -0700
+Processing by Api::CardsController#index as JSON
+  [1m[35mCard Load (1.2ms)[0m  SELECT "cards".* FROM "cards"
+  Rendered api/cards/_card.json.jbuilder (0.1ms)
+  Rendered api/cards/index.json.jbuilder (3.1ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/cards" for ::1 at 2017-07-07 16:30:19 -0700
+Processing by Api::CardsController#index as JSON
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  Rendered api/cards/_card.json.jbuilder (0.1ms)
+  Rendered api/cards/index.json.jbuilder (2.5ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms)
