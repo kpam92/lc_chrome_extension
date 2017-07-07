@@ -4,6 +4,8 @@ var child = document.getElementById("flashcard-container");
 if (child !== null) {
   document.body.removeChild(child);
 }
+var cardValues = [["front1","back1"], ["front2","back2"]]
+
 
 var container = document.createElement("div");
 container.id = 'flashcard-container'
@@ -22,9 +24,11 @@ var back = document.createElement("div");
 back.className = "back";
 
 var frontText = document.createElement("p");
-frontText.innerText = "front"
+frontText.innerText = cardValues[0][0]
+frontText.id = 0
+
 var backText = document.createElement("p");
-backText.innerText = "back"
+backText.innerText = cardValues[0][1]
 
 var toggleButton = document.createElement("div");
 toggleButton.id = 'toggle-button';
@@ -58,12 +62,24 @@ document.body.appendChild(container);
 setTimeout(handleToggle, 500);
 
 
-document.getElementById("flashcard").addEventListener("click", handler);
+document.getElementById("flashcard").addEventListener("click", flipOver);
 document.getElementById("toggle-button").addEventListener("click", handleToggle);
 
+document.getElementById("right-button").addEventListener("click", changeCard);
+document.getElementById("left-button").addEventListener("click", changeCard);
 
-// The handler also must go in a .js file
-function handler() {
+
+
+function changeCard() {
+  if (this.id === 'right-button') {
+
+  } else {
+
+  }
+}
+
+
+function flipOver() {
 
   var currFlash = document.getElementById("flashcard")
 
