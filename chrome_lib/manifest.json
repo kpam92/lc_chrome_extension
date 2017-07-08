@@ -3,7 +3,8 @@
   "description": "Leetcode note flashcards",
   "version": "2.0",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "http://lcflashcards.herokuapp.com/api/cards"
   ],
   "background": {
     "scripts": ["background.js","jquery-3.2.1.min.js"],
