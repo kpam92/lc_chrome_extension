@@ -50881,3 +50881,12 @@ Processing by Api::CardsController#index as JSON
   Rendered api/cards/_card.json.jbuilder (0.1ms)
   Rendered api/cards/index.json.jbuilder (7.7ms)
 Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2017-07-07 18:01:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 147ms (Views: 147.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2017-07-07 18:01:41 -0700
