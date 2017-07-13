@@ -50925,3 +50925,12 @@ Processing by Api::CardsController#index as JSON
   Rendered api/cards/_card.json.jbuilder (0.4ms)
   Rendered api/cards/index.json.jbuilder (5.6ms)
 Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-07-08 15:27:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 60ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2017-07-08 15:27:00 -0700

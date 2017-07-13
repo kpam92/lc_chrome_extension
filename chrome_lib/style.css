@@ -1,0 +1,101 @@
+.stage {
+  -webkit-perspective: 1000;
+}
+
+#flashcard-container {
+  position: fixed;
+  bottom: 10%;
+  -webkit-transition-timing-function: ease;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+#toggle-button {
+  float: left;
+  margin: 10% 8px 10% auto;
+  background-image: url("http://res.cloudinary.com/dt5viyxyq/image/upload/v1499386354/arrow_dfau9c.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  height:40px;
+  width:40px;
+  cursor: pointer;
+}
+
+#arrow-container {
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  margin: 0 50%;
+}
+#left-button {
+  background-image: url("https://res.cloudinary.com/dt5viyxyq/image/upload/a_180/v1499450954/arrow-right-outline-128_hv7ty0.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  height:40px;
+  width:40px;
+  float: left;
+  cursor: pointer;
+}
+
+#right-button {
+  background-image: url("https://res.cloudinary.com/dt5viyxyq/image/upload/v1499450954/arrow-right-outline-128_hv7ty0.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  height:40px;
+  width:40px;
+  float: left;
+  cursor: pointer;
+}
+
+.button-in{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -webkit-transition-timing-function: ease;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.button-out{
+  -webkit-transition-timing-function: ease-out;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+
+}
+.no-show {
+  right: -504px;
+}
+.show-card {
+  right: 1% !important;
+}
+.flashcard {
+  float: right;
+  height: 300px;
+  width: 500px;
+  margin: 10% auto;
+  border: 2px solid #202020;
+  border-radius: 3px;
+  /*box-shadow: 2px 2px 2px #000;*/
+  -webkit-transform-style: preserve-3d;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  cursor: ne-resize;
+}
+.flashcard div {
+  background: #ffffff;
+}
+
+.flipped, .back {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+}
+
+.front, .back {
+  height: 296px;
+  width: 496px;
+  position: absolute;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+}
+
+.front p, .back p {
+  margin-top: 25%;
+  font-size: 3em;
+}
