@@ -1,13 +1,13 @@
-# FlipThru
+<!-- # LC_chrome_extension
 
-[FlipThru Live][host]
+[LC_chrome_extension Live][host]
 
-[host]: http://flipthru.herokuapp.com
+[host]: http://LC_chrome_extension.herokuapp.com
 
 
-FlipThru is a single page full-stack application, showcasing certain UI/UX elements of Instagram.
+LC_chrome_extension is a single page full-stack application, showcasing certain UI/UX elements of Instagram.
 
-<a href="http://flipthru.herokuapp.com">
+<a href="http://LC_chrome_extension.herokuapp.com">
   <img src="https://raw.githubusercontent.com/kpam92/flip_thru/master/app/assets/images/screenshot.png"/>
 </a>
 
@@ -72,4 +72,4 @@ In process of implementing Jest tests on Redux reducers.
 
 ### Adding and Commenting on Photos
 
-This next step in this project is to create comment capabilities on photos, as well as allowing the user to upload through the Cloudinary API.
+This next step in this project is to create comment capabilities on photos, as well as allowing the user to upload through the Cloudinary API. -->
