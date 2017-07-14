@@ -14,65 +14,82 @@ This chrome extension for LeetCode allows users to study flashcards of their Lee
   <img src="https://raw.githubusercontent.com/kpam92/LC_chrome_extension/master/app/assets/images/screenshot.png"/>
 </a>
 
-<!-- ## Features & Implementation
+# Features & Implementation
 
 ### Users
 
-  Users have a "username" and "profile_pic" url.
+  Usernames are parsed from the active tab, then either fetched from the database, or added. An AJAX GET request then fetches the user, along with their flashcards in the database.
 
   ```javascript
-  const exampleItemState = {
-    1: {
+  // Parses username from the current tab, and sends CORS request to database
+  currUsername = document.getElementsByClassName("dropdown-menu")[1].firstElementChild.firstElementChild.href.substring(21)
+
+  var xhr = createCORSRequest('GET', "https://lcflashcards.herokuapp.com/api/users/1?username=?" + currUsername);
+
+  ```
+
+  ```ruby
+  class Api::UsersController < ApplicationController
+
+  # The controller action for fetching a user and their cards
+  # ...
+
+  def show
+
+    @user = User.find_by(:username => params[:username])
+    if @user
+      render "api/users/show"
+    end
+  end
+
+  #...
+  ```
+
+  ```javascript
+  // example of response from CORS request
+  const exampleUserResponse =
+    {
       id: 1,
       username: "user1",
-      profile_pic: "https://www.example.com/image1"
-    },
-    2: {
-      id: 2,
-      username: "Widget",
-      profile_pic: "https://www.example.com/image2"
-      }
-    }
-  };
+      cards: [
+        {
+          id: 1,
+          front: '11. Container With Most Water',
+          back: 'work on memoization'
+        },
+        {
+          id: 1,
+          front: '54. Spiral Matrix',
+          back: 'use markers for top, bottom, left, and right'
+        }
+      ]
+    };
   ```
-### Photos
+### Cards
 
-Photos consist of an "image_url", "description", and "author_id". Because every photo displayed on the feed is accompanied by the author's profile_pic and username, the database tables where then denormalized to avoid excessive querying, and each photo contains both "user_pic" and "username".
+When user and cards are fetched, the extension then iterates over array of cards, and displays them in injected HTML on to current tab.
 
   ```javascript
-  const examplePhotoState = {
-  1: {
-    image_url: 'https://www.example.com/image3',
-    description: 'skydiving',
-    user_pic: 'https://www.example.com/image1',
-    username: 'user1'
+  // function for toggling between each flashcard
+
+  function changeCard() {
+
+    var front = document.getElementById("front-text")
+    var back = document.getElementById("back-text")
+    var cardIndexElement = document.getElementsByClassName("front")[0]
+    var idx = parseInt(cardIndexElement.id)
+
+
+    if (this.id === 'right-button' && idx < cardValues.length - 1) {
+      front.innerText = cardValues[idx+1][0]
+      back.innerText = cardValues[idx+1][1]
+      cardIndexElement.id = (idx + 1)
+    } else if (this.id === 'left-button' && idx > 0) {
+      front.innerText = cardValues[idx-1][0]
+      back.innerText = cardValues[idx-1][1]
+      cardIndexElement.id = (idx - 1)
     }
-  };
-  ```
-When a user is fetched from the database and placed in state to show their profile, the jbuilder view also fetches all the user's photos through a partial. This makes it more accessible in the user state to extrapolate all photos to display.
-
-  ```javascript
-  json.extract! user, :id, :username, :profile_pic
-
-  json.photos do
-    json.partial! 'api/photos/photo', collection: user.photos, as: :photo
-  end
+  }
   ```
 
-### Likes
-
-  Likes have both an 'photo_id' and 'author_id'.
-
-  When the user clicks on the heart icon, it switches the class through a change in the component's state, then triggers an action to either delete or add the like into the database.
-
-## Future Directions for the Project
-
-I plan to add small adjustments to the project to provide better UX for the user
-
-### Jest Testing
-
-In process of implementing Jest tests on Redux reducers.
-
-### Adding and Commenting on Photos
-
-This next step in this project is to create comment capabilities on photos, as well as allowing the user to upload through the Cloudinary API. -->
+  ### Soon to be up as a live Chrome Extension

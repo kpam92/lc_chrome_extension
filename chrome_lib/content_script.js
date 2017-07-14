@@ -140,7 +140,7 @@ function createCORSRequest(method, url) {
     return xhr;
   }
 
-  var xhr = createCORSRequest('GET', "https://lcflashcards.herokuapp.com/api/cards");
+  var xhr = createCORSRequest('GET', "https://lcflashcards.herokuapp.com/api/users/1?username=?" + currUsername);
 
   xhr.send();
   if (!xhr) {
