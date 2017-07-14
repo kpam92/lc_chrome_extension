@@ -78,7 +78,7 @@ function changeCard() {
   var back = document.getElementById("back-text")
   var cardIndexElement = document.getElementsByClassName("front")[0]
   var idx = parseInt(cardIndexElement.id)
-  debugger;
+
 
   if (this.id === 'right-button' && idx < cardValues.length - 1) {
     front.innerText = cardValues[idx+1][0]
@@ -102,7 +102,7 @@ function flipOver() {
   }
 }
 function handleToggle() {
-
+  debugger;
   var container = document.getElementById("flashcard-container");
   var button = document.getElementById("toggle-button");
 
@@ -141,7 +141,22 @@ function createCORSRequest(method, url) {
   }
 
   var xhr = createCORSRequest('GET', "https://lcflashcards.herokuapp.com/api/cards");
+
   xhr.send();
   if (!xhr) {
     throw new Error('CORS not supported');
+  }
+
+  currentTab = document.URL;
+  var currUsername;
+
+  if (currentTab == "https://leetcode.com/notes/") {
+    currUsername = document.getElementsByClassName("dropdown-menu")[1].firstElementChild.firstElementChild.href.substring(21)
+    var lala = document.getElementsByClassName("panel-title")
+
+  } else if (currentTab.indexOf('leetcode') !== -1) {
+    currUsername = document.getElementsByClassName("dropdown-menu")[1].firstElementChild.firstElementChild.href.substring(21)
+
+  } else {
+
   }

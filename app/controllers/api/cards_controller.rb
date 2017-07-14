@@ -3,11 +3,12 @@ require 'byebug'
 class Api::CardsController < ApplicationController
 
   def index
-    doc = Nokogiri::HTML(open("https://leetcode.com/notes/"))
-    byebug
-    array_fronts = doc.xpath("//h4[@class='panel-title']")
-    array_backs = doc.xpath("//div[@class='note-content]/p")
+
+    # doc = Nokogiri::HTML(open("https://leetcode.com/notes/"))
+    # array_fronts = doc.xpath("//h4[@class='panel-title']")
+    # array_backs = doc.xpath("//div[@class='note-content]/p")
     @cards = Card.all
+
 
     # array_fronts.each_with_index do |front,idx|
     #   front = front
