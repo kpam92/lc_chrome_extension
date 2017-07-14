@@ -51820,3 +51820,9 @@ WHERE c.contype = 'f'
 ORDER BY c.conname
 
   [1m[36mCard Load (1.3ms)[0m  [1mSELECT "cards".* FROM "cards"[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["username", "hello"], ["created_at", "2017-07-14 05:55:46.831600"], ["updated_at", "2017-07-14 05:55:46.831600"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE (hello) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "hello"]]

@@ -1,17 +1,20 @@
-<!-- # LC_chrome_extension
+# LeetCode Flashcards Chrome Extension
 
-[LC_chrome_extension Live][host]
+This chrome extension for LeetCode allows users to study flashcards of their LeetCode notes on any page within in the site.
 
-[host]: http://LC_chrome_extension.herokuapp.com
+## How it works
 
+1. Users must be logged in to their LeetCode accounts, and their current tab must be on the site.(This extension does not take any private information from you or your account aside from your notes)
 
-LC_chrome_extension is a single page full-stack application, showcasing certain UI/UX elements of Instagram.
+2. If user is on the notes page while opening the chrome extension, the app will collect username, and search a connected backend API for this user. If it doesn't exist, it will save the username, as well as the notes on the active tab in the database. If user does exist, their notes are then updated.
+
+3. If user is on any other LeetCode page, the extension will then fetch the user's notes as flashcards that will appear on the right-hand side. (Note: This won't work unless username exists in the database already. User must instantiate flashcards through opening extension on notes page prior to using them anywhere within the site. )
 
 <a href="http://LC_chrome_extension.herokuapp.com">
-  <img src="https://raw.githubusercontent.com/kpam92/flip_thru/master/app/assets/images/screenshot.png"/>
+  <img src="https://raw.githubusercontent.com/kpam92/LC_chrome_extension/master/app/assets/images/screenshot.png"/>
 </a>
 
-## Features & Implementation
+<!-- ## Features & Implementation
 
 ### Users
 

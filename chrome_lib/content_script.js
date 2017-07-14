@@ -4,7 +4,7 @@ var child = document.getElementById("flashcard-container");
 if (child !== null) {
   document.body.removeChild(child);
 }
-var cardValues = [["front1","back1"], ["front2","back2"]]
+var cardValues = [["11. Container With Most Water","work on this later"], ["front2","back2"]]
 
 
 var container = document.createElement("div");
@@ -102,7 +102,7 @@ function flipOver() {
   }
 }
 function handleToggle() {
-  debugger;
+
   var container = document.getElementById("flashcard-container");
   var button = document.getElementById("toggle-button");
 
